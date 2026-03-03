@@ -294,9 +294,8 @@ class TerminalResume {
     // Add resize handle if not the last element
     if (container.children.length > 0) {
       const handle = document.createElement("div");
-      handle.className = `resize-handle ${
-        container.classList.contains("split-h") ? "horizontal" : "vertical"
-      }`;
+      handle.className = `resize-handle ${container.classList.contains("split-h") ? "horizontal" : "vertical"
+        }`;
       container.lastElementChild.appendChild(handle);
       this.setupResizeHandle(handle);
     }
@@ -522,12 +521,12 @@ class TerminalResume {
   }
 
   printWelcomeMessage(outputElement = this.output) {
-    const asciiArt = `███╗   ███╗ █████╗ ██████╗ ██╗ ██████╗
-████╗ ████║██╔══██╗██╔══██╗██║██╔═══██╗
-██╔████╔██║███████║██████╔╝██║██║   ██║
-██║╚██╔╝██║██╔══██║██╔══██╗██║██║   ██║
-██║ ╚═╝ ██║██║  ██║██║  ██║██║╚██████╔╝
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝ `;
+    const asciiArt = `     ██╗███████╗███████╗██████╗  █████╗ ███╗   ██╗
+     ██║██╔════╝██╔════╝██╔══██╗██╔══██╗████╗  ██║
+     ██║█████╗  █████╗  ██████╔╝███████║██╔██╗ ██║
+██   ██║██╔══╝  ██╔══╝  ██╔══██╗██╔══██║██║╚██╗██║
+╚█████╔╝███████╗███████╗██████╔╝██║  ██║██║ ╚████║
+ ╚════╝ ╚══════╝╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝`;
 
     const divider = "─────────────────────────────────────────────────";
 
@@ -535,11 +534,11 @@ class TerminalResume {
       this.wrapWithColor(asciiArt + "\n", "#d4843e") +
       this.wrapWithColor(divider + "\n", "#555555") +
       this.wrapWithColor(
-        "              Interactive Terminal Resume\n",
+        "           Jeeban Krushna Sahu — Interactive Terminal\n",
         "#888888"
       ) +
       this.wrapWithColor(
-        "         Software Engineer • Cloud Architect • Tech Lead\n",
+        "          AI/ML Engineer • Full-Stack Dev • Open Source\n",
         "#666666"
       ) +
       this.wrapWithColor(divider + "\n\n", "#555555") +
@@ -647,58 +646,58 @@ class TerminalResume {
     const about = `<span style="color: #ff8c00; font-weight: bold;">✨ About Me</span>
 
 ${this.wrapWithColor(
-  "┌─────────────────────────────────────────────────────────┐",
-  "#ff8c00"
-)}
+      "┌─────────────────────────────────────────────────────────┐",
+      "#ff8c00"
+    )}
 ${this.wrapWithColor("│", "#ff8c00")} ${this.wrapWithColor(
-      "Senior software engineer with more than 10 years of",
+      "B.Tech CSE student at ITER, SOA University (CGPA: 8.86)",
       "#ffffff"
     )}
 ${this.wrapWithColor("│", "#ff8c00")} ${this.wrapWithColor(
-      "programming experience.",
+      "passionate about AI, ML & building impactful software.",
       "#ffffff"
     )}
 ${this.wrapWithColor(
-  "└─────────────────────────────────────────────────────────┘",
-  "#ff8c00"
-)}
+      "└─────────────────────────────────────────────────────────┘",
+      "#ff8c00"
+    )}
 
-${this.wrapWithColor("⚡ Experience", "#ff8c00")}
+${this.wrapWithColor("⚡ Currently", "#ff8c00")}
 ${this.wrapWithColor(
-  "   Building scalable and efficient software solutions using",
-  "#ffffff"
-)}
-${this.wrapWithColor("   React, JavaScript, and Google Cloud", "#ff8c00")}
+      "   Pursuing B.Tech in CSE at ITER, Bhubaneswar (2023–2027)",
+      "#ffffff"
+    )}
+${this.wrapWithColor("   Building AI-powered web apps & open source tools", "#ff8c00")}
 
-${this.wrapWithColor("⚡ Passion", "#ff8c00")}
+${this.wrapWithColor("⚡ My Stack", "#ff8c00")}
 ${this.wrapWithColor(
-  "   Transforming innovative ideas into high-quality applications",
-  "#ffffff"
-)}
+      "   Next.js · React · TypeScript · Python · Django · MongoDB",
+      "#ffffff"
+    )}
 ${this.wrapWithColor(
-  "   with elegant and efficient implementations",
-  "#ffffff"
-)}
+      "   Groq AI · scikit-learn · Firebase · Tailwind · CSS",
+      "#ffffff"
+    )}
 
 ${this.wrapWithColor("⚡ Strengths", "#ff8c00")}
 ${this.wrapWithColor(
-  "   Strong team player with expertise in designing robust,",
-  "#ffffff"
-)}
-${this.wrapWithColor("   high-performance systems", "#ffffff")}
+      "   Fast learner, consistent builder, open-source contributor",
+      "#ffffff"
+    )}
+${this.wrapWithColor("   A dev who ships ✨", "#ffffff")}
 
 ${this.wrapWithColor(
-  "╭───────────────────────────────────────────────────────╮",
-  "#ff8c00"
-)}
+      "╭───────────────────────────────────────────────────────╮",
+      "#ff8c00"
+    )}
 ${this.wrapWithColor("│", "#ff8c00")} ${this.wrapWithColor(
-      "Ready to bring your innovative ideas to life!",
+      "Open to internships, collabs & cool side projects!",
       "#ffffff"
     )} ${this.wrapWithColor("│", "#ff8c00")}
 ${this.wrapWithColor(
-  "╰───────────────────────────────────────────────────────╯",
-  "#ff8c00"
-)}`;
+      "╰───────────────────────────────────────────────────────╯",
+      "#ff8c00"
+    )}`;
 
     const aboutDiv = document.createElement("div");
     aboutDiv.innerHTML = about;
@@ -778,143 +777,67 @@ ${this.wrapWithColor(
   }
 
   showExperience(outputElement = this.output) {
-    const experience = `<span style="color: #ffff00; font-weight: bold;">💼 Professional Experience</span>
+    const experience = `<span style="color: #ffff00; font-weight: bold;">💼 Projects & Experience</span>
 
-<span style="color: #00ffff;">UNICEPTA | Senior Software Engineer</span>
+<span style="color: #00ffff;">HIREBYTE | Resume Builder Platform</span>
 ${this.wrapWithColor(
-  "Jul 2020 - Present | Cologne, Germany | 450+ employees",
-  "#ffffff"
-)}
+      "Personal Project | Next.js + Firebase + TypeScript",
+      "#ffffff"
+    )}
 ${this.wrapWithColor(
-  "Visionary, AI-powered Media & Data Intelligence Solutions",
-  "#98fb98"
-)}
-
-• ${this.wrapWithColor("Part of Core team", "#ffa07a")} - ${this.wrapWithColor(
-      "Architect and part of every decision.",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor(
-      "Microservices engineer",
-      "#ffa07a"
-    )} - ${this.wrapWithColor(
-      "Designed and build services for distributed system",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("Pipeline engineer", "#ffa07a")} - ${this.wrapWithColor(
-      "Google cloud engineer for data pipeline",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("Fullstack engineer", "#ffa07a")} - ${this.wrapWithColor(
-      "Wrote and reviewed code for front/back/cloud.",
-      "#ffffff"
+      "ATS-friendly resume builder with real-time preview & templates.",
+      "#98fb98"
     )}
 
-${this.wrapWithColor("Technologies used:", "#00ffff")} ${this.wrapWithColor(
-      "Typescript, React, NodeJs, Poetry, PyTest, ReactJS, Jest, Cypress, ES6, ElasticSearch, Google Cloud, JIRA, Firebase, Kubernetes, Data Flow",
-      "#87cefa"
+• ${this.wrapWithColor("Live at:", "#ffa07a")} ${this.wrapWithColor(
+      '<a href="https://hirebyte.vercel.app" target="_blank" style="color:#87cefa">hirebyte.vercel.app</a>',
+      "#ffffff"
     )}
+• ${this.wrapWithColor("Stack:", "#ffa07a")} ${this.wrapWithColor("Next.js, TypeScript, Firebase, Tailwind CSS", "#ffffff")}
 
-<span style="color: #00ffff;">RITECH SOLUTIONS | Senior Software Engineer</span>
+<span style="color: #00ffff;">SCAMSHIELD | AI Scam Detection Platform</span>
 ${this.wrapWithColor(
-  "Jul 2018 – Jul 2020 | Tirana, Albania | 100-150 employees",
-  "#ffffff"
-)}
-
-• ${this.wrapWithColor("Part of Core team", "#ffa07a")} - ${this.wrapWithColor(
-      "Team that leads company tech decisions",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("Tech interviewer", "#ffa07a")} - ${this.wrapWithColor(
-      "Interview potential candidates.",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("Microsoft project", "#ffa07a")} - ${this.wrapWithColor(
-      "IOT marketing project in every Microsoft store.",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("Fullstack engineer", "#ffa07a")} - ${this.wrapWithColor(
-      "Wrote and reviewed code for big projects.",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor(
-      "AppriseMobile Tech Lead",
-      "#ffa07a"
-    )} - ${this.wrapWithColor(
-      "CRM for Toyota and corporates in USA",
+      "Personal Project | React + Django + Groq AI",
       "#ffffff"
     )}
 
-${this.wrapWithColor("Technologies used:", "#00ffff")} ${this.wrapWithColor(
-      "JavaScript, Python, pandas, NodeJs, ReactJS, Chai, Sinon, Mocha, ES6, ElasticSearch, Redis, Nginx, Gulp, JIRA, Docker, Azure, AWS, MongoDB",
-      "#87cefa"
+• ${this.wrapWithColor("Real-time phishing & fraud detection using ML + LLM", "#ffa07a")}
+• ${this.wrapWithColor("Stack:", "#ffa07a")} ${this.wrapWithColor("React, TypeScript, Django, scikit-learn, Groq Llama 3.3", "#ffffff")}
+• ${this.wrapWithColor("GitHub:", "#ffa07a")} ${this.wrapWithColor(
+      '<a href="https://github.com/Jeeban-2006/Scam_Shield" target="_blank" style="color:#87cefa">github.com/Jeeban-2006/Scam_Shield</a>',
+      "#ffffff"
     )}
 
-<span style="color: #00ffff;">GUTENBERG TECHNOLOGY | Software Engineering</span>
+<span style="color: #00ffff;">DSA SYNC | AI Collaborative DSA Tracker</span>
 ${this.wrapWithColor(
-  "Feb 2017 – Aug 2018 | Paris, France | 50-100 employees",
-  "#ffffff"
-)}
-
-• ${this.wrapWithColor(
-      "Fullstack developer",
-      "#ffa07a"
-    )} - ${this.wrapWithColor(
-      "Frontend and backend (real-time publisher platform) used by National Geographics, IUBH, Fujitsu",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("MEFIO developer", "#ffa07a")} - ${this.wrapWithColor(
-      "Highly available publisher platform",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor(
-      "Webreader developer",
-      "#ffa07a"
-    )} - ${this.wrapWithColor(
-      "reader platform, e-Learning platform",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("SaaS developer", "#ffa07a")} - ${this.wrapWithColor(
-      "Integrated strategy to migrate from manual sales to SaaS",
+      "Personal Project | Next.js 14 + MongoDB + Groq AI",
       "#ffffff"
     )}
 
-${this.wrapWithColor("Technologies used:", "#00ffff")} ${this.wrapWithColor(
-      "Python, ES6, ElasticSearch, Redis, Nginx, npm, Gulp, JIRA, Docker, AWS S3, RethinkDB, ReactJS, NodeJS, AngularJS, JavaScript",
-      "#87cefa"
-    )}
+• ${this.wrapWithColor("PWA with friend challenges, AI insights & push notifications", "#ffa07a")}
+• ${this.wrapWithColor("Stack:", "#ffa07a")} ${this.wrapWithColor("Next.js 14, TypeScript, MongoDB, Zustand, Groq AI", "#ffffff")}
 
-<span style="color: #00ffff;">GROUP OF COMPANIES | Software Engineer</span>
+<span style="color: #00ffff;">NASA EXPLORER | Space Discovery App</span>
 ${this.wrapWithColor(
-  "Mar 2015 – Feb 2017 | Tirana, Albania | 5-30 employees",
-  "#ffffff"
-)}
-
-• ${this.wrapWithColor("Software developer", "#ffa07a")} - ${this.wrapWithColor(
-      "Developed web and native projects",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("Bar management app", "#ffa07a")} - ${this.wrapWithColor(
-      "Developed app for bar/restaurant management.",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor(
-      "Bank system optimisation",
-      "#ffa07a"
-    )} - ${this.wrapWithColor(
-      "Optimised aggregation from 11h to 1h",
-      "#ffffff"
-    )}
-• ${this.wrapWithColor("UKD developer", "#ffa07a")} - ${this.wrapWithColor(
-      "Water supply billing process for Albania, Government project",
+      "Personal Project | Vanilla JS + NASA APIs",
       "#ffffff"
     )}
 
-${this.wrapWithColor("Technologies used:", "#00ffff")} ${this.wrapWithColor(
-      "Typescript, Python, Gulp, Docker, MongoDB, ReactJS, NodeJs, AngularJS, JavaScript, Java",
-      "#87cefa"
+• ${this.wrapWithColor("3D starfield, APOD, Mars rovers, exoplanets, space quiz", "#ffa07a")}
+• ${this.wrapWithColor("GitHub:", "#ffa07a")} ${this.wrapWithColor(
+      '<a href="https://github.com/Jeeban-2006/NASA-Explorer" target="_blank" style="color:#87cefa">github.com/Jeeban-2006/NASA-Explorer</a>',
+      "#ffffff"
+    )}
+
+${this.wrapWithColor("🎓 ITER, SOA UNIVERSITY | B.Tech CSE Student", "#00ffff")}
+${this.wrapWithColor(
+      "2023 – Present | Bhubaneswar, Odisha | CGPA: 8.86",
+      "#ffffff"
+    )}
+${this.wrapWithColor(
+      "Focused on DSA, System Design, AI/ML & Software Engineering.",
+      "#98fb98"
     )}`;
-
     const experienceDiv = document.createElement("div");
     experienceDiv.innerHTML = experience;
     outputElement.appendChild(experienceDiv);
@@ -922,46 +845,92 @@ ${this.wrapWithColor("Technologies used:", "#00ffff")} ${this.wrapWithColor(
   }
 
   showEducation(outputElement = this.output) {
-    const education = `<span style="color: #ff8c00; font-weight: bold;">🎓 Education</span>
+    const education = `< span style = "color: #ff8c00; font-weight: bold;" >🎓 Education</span >
 
-${this.wrapWithColor(
-  "┌──────────────────────────────────────────────────┐",
-  "#ff8c00"
-)}
+      ${this.wrapWithColor(
+      "┌──────────────────────────────────────────────────┐",
+      "#ff8c00"
+    )
+      }
 ${this.wrapWithColor("│", "#ff8c00")}${this.wrapWithColor(
-      " Bachelor of Computer Science ",
-      "#ffffff"
-    )}${this.wrapWithColor("│", "#ff8c00")}
+        " B.Tech in Computer Science & Engineering     ",
+        "#ffffff"
+      )
+      }${this.wrapWithColor("│", "#ff8c00")}
 ${this.wrapWithColor(
-  "└──────────────────────────────────────────────────┘",
-  "#ff8c00"
-)}
+        "└──────────────────────────────────────────────────┘",
+        "#ff8c00"
+      )
+      }
 
 ${this.wrapWithColor("🏛️ Institution:", "#ff8c00")} ${this.wrapWithColor(
-      "University of Tirana",
-      "#ffffff"
-    )}
+        "ITER, SOA University (Institute of Technical Education & Research)",
+        "#ffffff"
+      )
+      }
 ${this.wrapWithColor("📅 Duration:", "#ff8c00")}    ${this.wrapWithColor(
-      "2013 - 2016",
-      "#ffffff"
-    )}
+        "2023 – 2027",
+        "#ffffff"
+      )
+      }
 ${this.wrapWithColor("📍 Location:", "#ff8c00")}    ${this.wrapWithColor(
-      "Tirana, Albania",
-      "#ffffff"
-    )}
+        "Bhubaneswar, Odisha, India",
+        "#ffffff"
+      )
+      }
+${this.wrapWithColor("🏆 CGPA:", "#ff8c00")}        ${this.wrapWithColor(
+        "8.86",
+        "#98fb98"
+      )
+      }
 
 ${this.wrapWithColor(
-  "╭──────────────────────────────────────────────────╮",
-  "#ff8c00"
-)}
+        "┌──────────────────────────────────────────────────┐",
+        "#ff8c00"
+      )
+      }
 ${this.wrapWithColor("│", "#ff8c00")}${this.wrapWithColor(
-      " Foundation of my software engineering journey ",
-      "#ffffff"
-    )}${this.wrapWithColor("│", "#ff8c00")}
+        " Higher Secondary (Science / PCM)             ",
+        "#ffffff"
+      )
+      }${this.wrapWithColor("│", "#ff8c00")}
 ${this.wrapWithColor(
-  "╰──────────────────────────────────────────────────╯",
-  "#ff8c00"
-)}`;
+        "└──────────────────────────────────────────────────┘",
+        "#ff8c00"
+      )
+      }
+
+${this.wrapWithColor("🏛️ Institution:", "#ff8c00")} ${this.wrapWithColor(
+        "Balasore Higher Secondary School",
+        "#ffffff"
+      )
+      }
+${this.wrapWithColor("📅 Duration:", "#ff8c00")}    ${this.wrapWithColor(
+        "2021 – 2023",
+        "#ffffff"
+      )
+      }
+${this.wrapWithColor("📍 Location:", "#ff8c00")}    ${this.wrapWithColor(
+        "Balasore, Odisha, India",
+        "#ffffff"
+      )
+      }
+
+${this.wrapWithColor(
+        "╭──────────────────────────────────────────────────╮",
+        "#ff8c00"
+      )
+      }
+${this.wrapWithColor("│", "#ff8c00")}${this.wrapWithColor(
+        " Building the future with code, one commit at a time",
+        "#ffffff"
+      )
+      }${this.wrapWithColor("│", "#ff8c00")}
+${this.wrapWithColor(
+        "╰──────────────────────────────────────────────────╯",
+        "#ff8c00"
+      )
+      } `;
 
     const educationDiv = document.createElement("div");
     educationDiv.innerHTML = education;
@@ -970,32 +939,35 @@ ${this.wrapWithColor(
   }
 
   showSkills(outputElement = this.output) {
-    const skills = `<span style="color: #ffff00; font-weight: bold;">🛠️ PROGRAMMING</span>
+    const skills = `< span style = "color: #ffff00; font-weight: bold;" >🛠️ SKILLS</span >
 
-• ${this.wrapWithColor("Typescript", "#ffffff")}
+      ${this.wrapWithColor("Frontend:", "#00ffff")}
+• ${this.wrapWithColor("React.js", "#ffffff")}
+• ${this.wrapWithColor("Next.js 14", "#ffffff")}
+• ${this.wrapWithColor("TypeScript", "#ffffff")}
+• ${this.wrapWithColor("Tailwind CSS", "#ffffff")}
+• ${this.wrapWithColor("HTML / CSS / JavaScript", "#ffffff")}
+• ${this.wrapWithColor("Framer Motion", "#ffffff")}
+
+${this.wrapWithColor("Backend:", "#00ffff")}
+• ${this.wrapWithColor("Node.js", "#ffffff")}
+• ${this.wrapWithColor("Django / Django REST Framework", "#ffffff")}
 • ${this.wrapWithColor("Python", "#ffffff")}
-• ${this.wrapWithColor("Javascript", "#ffffff")}
-• ${this.wrapWithColor("Node", "#ffffff")}
-• ${this.wrapWithColor("React", "#ffffff")}
-• ${this.wrapWithColor("Angular", "#ffffff")}
-• ${this.wrapWithColor("Google Cloud", "#ffffff")}
-• ${this.wrapWithColor("AWS", "#ffffff")}
-• ${this.wrapWithColor("Azure", "#ffffff")}
-• ${this.wrapWithColor("Docker", "#ffffff")}
-• ${this.wrapWithColor("Terraform", "#ffffff")}
-• ${this.wrapWithColor("Kubernetes", "#ffffff")}
-• ${this.wrapWithColor("Java", "#ffffff")}
-• ${this.wrapWithColor("Kotlin", "#ffffff")}
-• ${this.wrapWithColor("MongoDB", "#ffffff")}
-• ${this.wrapWithColor("RethinkDB", "#ffffff")}
-• ${this.wrapWithColor("Jest", "#ffffff")}
-• ${this.wrapWithColor("ElasticSearch", "#ffffff")}
-• ${this.wrapWithColor("GraphQL", "#ffffff")}
-• ${this.wrapWithColor("Express", "#ffffff")}
-• ${this.wrapWithColor("Redis", "#ffffff")}
-• ${this.wrapWithColor("SQL", "#ffffff")}
-• ${this.wrapWithColor("HTML", "#ffffff")}
-• ${this.wrapWithColor("CSS", "#ffffff")}`;
+• ${this.wrapWithColor("MongoDB / Mongoose", "#ffffff")}
+• ${this.wrapWithColor("Firebase", "#ffffff")}
+• ${this.wrapWithColor("JWT / Authentication", "#ffffff")}
+
+${this.wrapWithColor("AI / ML:", "#00ffff")}
+• ${this.wrapWithColor("Groq API (Llama 3.3 70B)", "#ffffff")}
+• ${this.wrapWithColor("scikit-learn", "#ffffff")}
+• ${this.wrapWithColor("TF-IDF / Logistic Regression", "#ffffff")}
+• ${this.wrapWithColor("NumPy / Pandas", "#ffffff")}
+
+${this.wrapWithColor("Tools & DevOps:", "#00ffff")}
+• ${this.wrapWithColor("Git / GitHub", "#ffffff")}
+• ${this.wrapWithColor("Vercel / Netlify", "#ffffff")}
+• ${this.wrapWithColor("Zustand / Recharts", "#ffffff")}
+• ${this.wrapWithColor("PWA / next-pwa", "#ffffff")} `;
 
     const skillsDiv = document.createElement("div");
     skillsDiv.innerHTML = skills;
@@ -1004,53 +976,73 @@ ${this.wrapWithColor(
   }
 
   showContact(outputElement = this.output) {
-    const contact = `<span style="color: #ff8c00; font-weight: bold;">📫 Contact Information</span>
+    const contact = `< span style = "color: #ff8c00; font-weight: bold;" >📫 Contact Information</span >
 
-${this.wrapWithColor("┌────────────────────────────────────────┐", "#ff8c00")}
+      ${this.wrapWithColor("┌────────────────────────────────────────┐", "#ff8c00")}
 ${this.wrapWithColor("│", "#ff8c00")} ${this.wrapWithColor(
-      "Let's connect and create something great!",
+      "Let's connect and build something cool! 🚀",
       "#ffffff"
-    )} ${this.wrapWithColor("│", "#ff8c00")}
+    )
+      } ${this.wrapWithColor("│", "#ff8c00")}
 ${this.wrapWithColor("└────────────────────────────────────────┘", "#ff8c00")}
 
 ${this.wrapWithColor("✉", "#ff8c00")}  ${this.wrapWithColor(
-      "Email:",
-      "#ff8c00"
-    )} ${this.wrapWithColor(
-      '<a href="mailto:marjoballabani@gmail.com" style="color: #ffffff; text-decoration: none;">marjoballabani@gmail.com</a>',
-      "#ffffff"
-    )}
+        "Email:",
+        "#ff8c00"
+      )
+      } ${this.wrapWithColor(
+        '<a href="mailto:jeebankrushnasahu1@gmail.com" style="color: #ffffff; text-decoration: none;">jeebankrushnasahu1@gmail.com</a>',
+        "#ffffff"
+      )
+      }
 
 ${this.wrapWithColor("🌐", "#ff8c00")}  ${this.wrapWithColor(
-      "Website:",
-      "#ff8c00"
-    )} ${this.wrapWithColor(
-      '<a href="https://marjoballabani.me" target="_blank" style="color: #ffffff; text-decoration: none;">marjoballabani.me</a>',
-      "#ffffff"
-    )}
+        "Website:",
+        "#ff8c00"
+      )
+      } ${this.wrapWithColor(
+        '<a href="https://jeebankrushnasahu.me" target="_blank" style="color: #ffffff; text-decoration: none;">jeebankrushnasahu.me</a>',
+        "#ffffff"
+      )
+      }
 
 ${this.wrapWithColor("⚡", "#ff8c00")}  ${this.wrapWithColor(
-      "Github:",
-      "#ff8c00"
-    )} ${this.wrapWithColor(
-      '<a href="https://github.com/marjoballabani" target="_blank" style="color: #ffffff; text-decoration: none;">github.com/marjoballabani</a>',
-      "#ffffff"
-    )}
+        "GitHub:",
+        "#ff8c00"
+      )
+      } ${this.wrapWithColor(
+        '<a href="https://github.com/Jeeban-2006" target="_blank" style="color: #ffffff; text-decoration: none;">github.com/Jeeban-2006</a>',
+        "#ffffff"
+      )
+      }
 
 ${this.wrapWithColor("💼", "#ff8c00")}  ${this.wrapWithColor(
-      "LinkedIn:",
-      "#ff8c00"
-    )} ${this.wrapWithColor(
-      '<a href="https://linkedin.com/in/marjo-ballabani" target="_blank" style="color: #ffffff; text-decoration: none;">linkedin.com/in/marjo-ballabani</a>',
-      "#ffffff"
-    )}
+        "LinkedIn:",
+        "#ff8c00"
+      )
+      } ${this.wrapWithColor(
+        '<a href="https://linkedin.com/in/jeeban-krushna-sahu-004228301" target="_blank" style="color: #ffffff; text-decoration: none;">linkedin.com/in/jeeban-krushna-sahu</a>',
+        "#ffffff"
+      )
+      }
+
+${this.wrapWithColor("📸", "#ff8c00")}  ${this.wrapWithColor(
+        "Instagram:",
+        "#ff8c00"
+      )
+      } ${this.wrapWithColor(
+        '<a href="https://www.instagram.com/jenext.exe" target="_blank" style="color: #ffffff; text-decoration: none;">@jenext.exe</a>',
+        "#ffffff"
+      )
+      }
 
 ${this.wrapWithColor("╭────────────────────────────────────────╮", "#ff8c00")}
 ${this.wrapWithColor("│", "#ff8c00")} ${this.wrapWithColor(
-      "Feel free to reach out for opportunities!",
-      "#ffffff"
-    )} ${this.wrapWithColor("│", "#ff8c00")}
-${this.wrapWithColor("╰────────────────────────────────────────╯", "#ff8c00")}`;
+        "Open for internships, collabs & projects!",
+        "#ffffff"
+      )
+      } ${this.wrapWithColor("│", "#ff8c00")}
+${this.wrapWithColor("╰────────────────────────────────────────╯", "#ff8c00")} `;
 
     const contactDiv = document.createElement("div");
     contactDiv.innerHTML = contact;
@@ -1094,34 +1086,77 @@ ${this.wrapWithColor("╰──────────────────�
   loadProjects() {
     this.projects = [
       {
-        title: "Interactive Terminal Resume",
-        description: "A unique terminal-based resume with interactive features",
-        image: "path/to/project-image.jpg",
-        technologies: ["JavaScript", "HTML", "CSS"],
-        demo: "https://demo.example.com",
-        repo: "https://github.com/example/repo",
+        title: "HireByte",
+        description: "ATS-friendly resume builder with real-time preview & Firebase storage.",
+        image: "",
+        technologies: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+        demo: "https://hirebyte.vercel.app",
+        repo: "https://github.com/Jeeban-2006/HireByte",
       },
-      // Add more projects
+      {
+        title: "ScamShield",
+        description: "AI-powered scam detection platform using ML + Groq Llama 3.3 70B.",
+        image: "",
+        technologies: ["React", "Django", "scikit-learn", "Firebase", "MongoDB"],
+        demo: "https://scam-shield-fawn.vercel.app/",
+        repo: "https://github.com/Jeeban-2006/Scam_Shield",
+      },
+      {
+        title: "DSA Sync",
+        description: "Collaborative DSA tracker with AI insights, friends & push notifications.",
+        image: "",
+        technologies: ["Next.js 14", "MongoDB", "Groq AI", "Zustand", "PWA"],
+        demo: "https://dsa-sync.vercel.app/",
+        repo: "https://github.com/Jeeban-2006/DSA-Sync",
+      },
+      {
+        title: "NASA Explorer",
+        description: "Space discovery app with 3D starfield, APOD, Mars rovers & space quiz.",
+        image: "",
+        technologies: ["JavaScript", "NASA API", "Canvas", "HTML/CSS"],
+        demo: "https://nasa-explorer0.netlify.app/",
+        repo: "https://github.com/Jeeban-2006/NASA-Explorer",
+      },
+      {
+        title: "Rewire",
+        description: "Advanced ToDo app with drag-and-drop, priority levels & dark mode.",
+        image: "",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+        demo: "https://rewire-todo.netlify.app/",
+        repo: "",
+      },
+      {
+        title: "DiaGuard AI",
+        description: "Preventive healthcare app using AI/ML to monitor and manage diabetes.",
+        image: "",
+        technologies: ["Python", "Machine Learning", "React"],
+        demo: "",
+        repo: "https://github.com/Jeeban-2006/diaguard",
+      },
     ];
   }
 
   loadSkills() {
     this.skills = {
-      programming: {
-        JavaScript: 95,
-        Python: 90,
-        "React.js": 85,
-        "Node.js": 88,
+      Frontend: {
+        "React.js": 88,
+        "Next.js 14": 85,
+        TypeScript: 82,
+        "Tailwind CSS": 90,
+        JavaScript: 90,
       },
-      cloud: {
-        "Google Cloud": 92,
-        AWS: 85,
-        Azure: 80,
+      Backend: {
+        Python: 85,
+        Django: 80,
+        "Node.js": 75,
+        MongoDB: 82,
+        Firebase: 85,
       },
-      databases: {
-        MongoDB: 90,
-        PostgreSQL: 85,
-        Redis: 82,
+      "AI / ML": {
+        "scikit-learn": 78,
+        "Groq API": 80,
+        "NumPy/Pandas": 75,
+        "TF-IDF": 72,
       },
     };
   }
@@ -1146,7 +1181,7 @@ ${this.wrapWithColor("╰──────────────────�
 
   // Theme handling
   handleThemeChange(theme) {
-    this.terminal.className = `terminal theme-${theme}`;
+    this.terminal.className = `terminal theme - ${theme} `;
     localStorage.setItem("theme", theme);
     this.currentTheme = theme;
     this.closeModal(this.themeModal);
@@ -1167,32 +1202,31 @@ ${this.wrapWithColor("╰──────────────────�
     container.innerHTML = this.projects
       .map(
         (project) => `
-      <div class="project-card">
-        <img src="${project.image}" alt="${
-          project.title
-        }" class="project-image">
-        <div class="project-details">
-          <h3 class="project-title">${project.title}</h3>
-          <p class="project-description">${project.description}</p>
-          <div class="project-tech">
-            ${project.technologies
-              .map(
-                (tech) => `
+      < div class="project-card" >
+        <img src="${project.image}" alt="${project.title
+          }" class="project-image">
+          <div class="project-details">
+            <h3 class="project-title">${project.title}</h3>
+            <p class="project-description">${project.description}</p>
+            <div class="project-tech">
+              ${project.technologies
+            .map(
+              (tech) => `
               <span class="tech-tag">${tech}</span>
             `
-              )
-              .join("")}
-          </div>
-          <div class="project-links">
-            <a href="${project.demo}" class="project-link" target="_blank">
-              <i class="fas fa-external-link-alt"></i> Demo
-            </a>
-            <a href="${project.repo}" class="project-link" target="_blank">
-              <i class="fab fa-github"></i> Repository
-            </a>
+            )
+            .join("")}
+            </div>
+            <div class="project-links">
+              <a href="${project.demo}" class="project-link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a href="${project.repo}" class="project-link" target="_blank">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
           </div>
         </div>
-      </div>
     `
       )
       .join("");
@@ -1205,7 +1239,7 @@ ${this.wrapWithColor("╰──────────────────�
     container.innerHTML = Object.entries(this.skills)
       .map(
         ([category, skills]) => `
-      <div class="skill-category">
+      < div class="skill-category" >
         <h3 class="skill-category-title">${category}</h3>
         <div class="skill-bars">
           ${Object.entries(skills)
@@ -1224,8 +1258,8 @@ ${this.wrapWithColor("╰──────────────────�
             )
             .join("")}
         </div>
-      </div>
-    `
+      </div >
+      `
       )
       .join("");
     this.showModal(this.skillsModal);
@@ -1276,10 +1310,10 @@ ${this.wrapWithColor("╰──────────────────�
     gameContainer.className = "game-container";
     gameContainer.id = "snake-game-container";
     gameContainer.innerHTML = `
-      <div class="game-instructions">
+      < div class="game-instructions" >
         <p>Snake Game: Use arrow keys to move.</p>
         <p>Press P to pause, SPACE to restart, ESC to exit.</p>
-      </div>
+      </div >
       <div id="snake-game-score">Score: 0</div>
       <div id="snake-game-canvas"></div>
     `;
@@ -1360,7 +1394,7 @@ ${this.wrapWithColor("╰──────────────────�
           p.textAlign(p.CENTER, p.CENTER);
           p.text("Game Over!", canvasWidth / 2, canvasHeight / 2 - 20);
           p.textSize(16);
-          p.text(`Score: ${score}`, canvasWidth / 2, canvasHeight / 2 + 20);
+          p.text(`Score: ${score} `, canvasWidth / 2, canvasHeight / 2 + 20);
           p.text(
             "Press SPACE to restart",
             canvasWidth / 2,
@@ -1560,7 +1594,7 @@ ${this.wrapWithColor("╰──────────────────�
       function updateScore() {
         const scoreElement = document.getElementById("snake-game-score");
         if (scoreElement) {
-          scoreElement.textContent = `Score: ${score}`;
+          scoreElement.textContent = `Score: ${score} `;
         }
       }
     };
@@ -1681,49 +1715,48 @@ ${this.wrapWithColor("╰──────────────────�
       const apiKey = "4331a27995f4c5b5e8d1eab1ed3d88b4"; // Free API key with limited usage
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
         location
-      )}&appid=${apiKey}&units=metric`;
+      )
+        }& appid=${apiKey}& units=metric`;
 
       const response = await fetch(url);
 
       if (!response.ok) {
-        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        throw new Error(`Error: ${response.status} - ${response.statusText} `);
       }
 
       const data = await response.json();
 
       // Format weather data
-      const weatherHTML = `<div class="weather-container">
+      const weatherHTML = `< div class="weather-container" >
         <div class="weather-header">
-          <span style="color: #ffff00; font-weight: bold;">🌤️ Weather for ${
-            data.name
-          }, ${data.sys.country}</span>
+          <span style="color: #ffff00; font-weight: bold;">🌤️ Weather for ${data.name
+        }, ${data.sys.country}</span>
         </div>
         <div class="weather-body">
           <div class="weather-main">
             <span style="font-size: 2rem; color: #ffffff;">${Math.round(
-              data.main.temp
-            )}°C</span>
+          data.main.temp
+        )}°C</span>
             <span style="color: #cccccc;">${data.weather[0].main}</span>
           </div>
           <div class="weather-details">
             <div><span style="color: #87cefa;">Feels like:</span> ${Math.round(
-              data.main.feels_like
-            )}°C</div>
-            <div><span style="color: #87cefa;">Humidity:</span> ${
-              data.main.humidity
-            }%</div>
+          data.main.feels_like
+        )}°C</div>
+            <div><span style="color: #87cefa;">Humidity:</span> ${data.main.humidity
+        }%</div>
             <div><span style="color: #87cefa;">Wind:</span> ${Math.round(
-              data.wind.speed * 3.6
-            )} km/h</div>
+          data.wind.speed * 3.6
+        )} km/h</div>
           </div>
         </div>
-      </div>`;
+      </div > `;
 
       this.printToOutput(outputElement, weatherHTML, "");
     } catch (error) {
       this.printToOutput(
         outputElement,
-        `Failed to fetch weather data: ${error.message}`,
+        `Failed to fetch weather data: ${error.message} `,
         "error"
       );
     }
@@ -1758,22 +1791,22 @@ ${this.wrapWithColor("╰──────────────────�
           ? result.toFixed(4).replace(/\.?0+$/, "")
           : result.toString();
 
-      const calculationHTML = `<div class="calculation">
+      const calculationHTML = `< div class="calculation" >
         <div class="calculation-expression">${this.wrapWithColor(
-          expression,
-          "#87cefa"
-        )}</div>
+        expression,
+        "#87cefa"
+      )}</div>
         <div class="calculation-result">${this.wrapWithColor(
-          "= " + formattedResult,
-          "#98fb98"
-        )}</div>
-      </div>`;
+        "= " + formattedResult,
+        "#98fb98"
+      )}</div>
+      </div > `;
 
       this.printToOutput(outputElement, calculationHTML, "");
     } catch (error) {
       this.printToOutput(
         outputElement,
-        `Error: Could not evaluate the expression. Make sure it's a valid mathematical expression.`,
+        `Error: Could not evaluate the expression.Make sure it's a valid mathematical expression.`,
         "error"
       );
     }
@@ -1838,7 +1871,7 @@ ${this.wrapWithColor("╰──────────────────�
 
     // Add terminal title
     const terminalTitle = document.createElement("div");
-    terminalTitle.textContent = "marjo@ballabani: ~/interactive-resume";
+    terminalTitle.textContent = "jeeban@sahu: ~/portfolio";
     terminalTitle.style.color = "#f8f8f2";
     terminalTitle.style.fontSize = "12px";
     terminalTitle.style.fontFamily = "'Fira Code', monospace";
@@ -1867,12 +1900,12 @@ ${this.wrapWithColor("╰──────────────────�
     asciiArt.style.fontSize = "10px";
     asciiArt.style.fontFamily = "'Fira Code', monospace";
     asciiArt.style.lineHeight = "1";
-    asciiArt.innerHTML = `███╗   ███╗ █████╗ ██████╗ ██╗ ██████╗
-████╗ ████║██╔══██╗██╔══██╗██║██╔═══██╗
-██╔████╔██║███████║██████╔╝██║██║   ██║
-██║╚██╔╝██║██╔══██║██╔══██╗██║██║   ██║
-██║ ╚═╝ ██║██║  ██║██║  ██║██║╚██████╔╝
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝ `;
+    asciiArt.innerHTML = `     ██╗███████╗███████╗██████╗  █████╗ ███╗   ██╗
+     ██║██╔════╝██╔════╝██╔══██╗██╔══██╗████╗  ██║
+     ██║█████╗  █████╗  ██████╔╝███████║██╔██╗ ██║
+██   ██║██╔══╝  ██╔══╝  ██╔══██╗██╔══██║██║╚██╗██║
+╚█████╔╝███████╗███████╗██████╔╝██║  ██║██║ ╚████║
+ ╚════╝ ╚══════╝╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝`;
     terminalContent.appendChild(asciiArt);
 
     // Add divider
@@ -1885,7 +1918,7 @@ ${this.wrapWithColor("╰──────────────────�
 
     // Add subtitle
     const subtitle = document.createElement("div");
-    subtitle.textContent = "Interactive Terminal Resume";
+    subtitle.textContent = "Jeeban Krushna Sahu — Interactive Terminal";
     subtitle.style.color = "#888888";
     subtitle.style.fontSize = "12px";
     subtitle.style.fontFamily = "'Fira Code', monospace";
@@ -1895,7 +1928,7 @@ ${this.wrapWithColor("╰──────────────────�
 
     // Add role
     const role = document.createElement("div");
-    role.textContent = "Software Engineer • Cloud Architect • Tech Lead";
+    role.textContent = "AI/ML Engineer • Full-Stack Dev • B.Tech CSE @ ITER | CGPA 8.86";
     role.style.color = "#666666";
     role.style.fontSize = "10px";
     role.style.fontFamily = "'Fira Code', monospace";

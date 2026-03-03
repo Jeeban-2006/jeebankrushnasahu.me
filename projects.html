@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Projects | Jeeban Krushna Sahu</title>
+    <meta name="title" content="Projects | Jeeban Krushna Sahu">
+    <meta name="description"
+        content="All projects by Jeeban Krushna Sahu — AI/ML Engineer & Frontend Developer. Explore HireByte, DiaGuard AI, Rewire, and more.">
+    <meta name="author" content="Jeeban Krushna Sahu">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jeebankrushnasahu.me/projects.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Stylesheets -->
+    <link rel="preload" href="neo-styles.css" as="style">
+    <link rel="stylesheet" href="neo-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ── Projects Page Specific Styles ── */
+        .projects-hero {
+            padding: 3rem 3rem 1.5rem;
+            border-bottom: 3px solid var(--border);
+        }
+
+        .projects-hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.1rem;
+            background: var(--white);
+            border: 3px solid var(--border);
+            box-shadow: 4px 4px 0 var(--border);
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .back-btn:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0 0 0 var(--border);
+        }
+
+        .projects-page-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            background: var(--yellow);
+            border: 4px solid var(--border);
+            box-shadow: 6px 6px 0 var(--border);
+            padding: 0.4rem 1.2rem;
+            display: inline-block;
+            letter-spacing: 0.05em;
+        }
+
+        .projects-subtitle {
+            font-size: 1rem;
+            color: var(--text);
+            opacity: 0.7;
+            margin-top: 0.75rem;
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* ── Projects Grid ── */
+        .projects-container {
+            padding: 2rem 3rem 4rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* ── Project Card ── */
+        .project-card {
+            background: var(--white);
+            border: 3px solid var(--border);
+            box-shadow: 6px 6px 0 var(--border);
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            opacity: 0;
+            animation: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card.fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .project-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0 var(--border);
+        }
+
+        /* Accent stripe at top of card */
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+        }
+
+        .project-card.accent-cyan::before {
+            background: var(--cyan);
+        }
+
+        .project-card.accent-pink::before {
+            background: var(--pink);
+        }
+
+        .project-card.accent-yellow::before {
+            background: var(--yellow);
+        }
+
+        .project-card.accent-green::before {
+            background: var(--accent);
+        }
+
+        .project-card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .project-emoji {
+            font-size: 2.5rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .project-status {
+            font-size: 0.7rem;
+            font-weight: 700;
+            font-family: 'Space Mono', monospace;
+            padding: 0.2rem 0.55rem;
+            border: 2px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            flex-shrink: 0;
+        }
+
+        .status-live {
+            background: var(--cyan);
+            color: var(--text);
+        }
+
+        .status-wip {
+            background: var(--yellow);
+            color: var(--text);
+        }
+
+        .status-github {
+            background: var(--accent);
+            color: var(--text);
+        }
+
+        .project-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .project-tagline {
+            font-size: 0.85rem;
+            font-family: 'Space Mono', monospace;
+            color: var(--text);
+            opacity: 0.65;
+            margin: 0;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        /* Tech tags */
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+        }
+
+        .project-tag {
+            font-size: 0.75rem;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            background: var(--white);
+            border: 2px solid var(--border);
+            color: var(--text);
+        }
+
+        body[data-theme="dark"] .project-tag {
+            background: var(--bg);
+        }
+
+        /* Action buttons */
+        .project-actions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .proj-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.5rem 1rem;
+            border: 2.5px solid var(--border);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s ease;
+            font-family: 'Space Grotesk', sans-serif;
+            box-shadow: 3px 3px 0 var(--border);
+        }
+
+        .proj-btn:hover {
+            transform: translate(3px, 3px);
+            box-shadow: 0 0 0 var(--border);
+        }
+
+        .proj-btn-live {
+            background: var(--cyan);
+        }
+
+        .proj-btn-github {
+            background: var(--yellow);
+        }
+
+        .proj-btn-demo {
+            background: var(--accent);
+        }
+
+        /* Stagger delay for cards */
+        .project-card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .project-card:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .project-card:nth-child(3) {
+            animation-delay: 0.25s;
+        }
+
+        .project-card:nth-child(4) {
+            animation-delay: 0.35s;
+        }
+
+        .project-card:nth-child(5) {
+            animation-delay: 0.45s;
+        }
+
+        .project-card:nth-child(6) {
+            animation-delay: 0.55s;
+        }
+
+        .project-card:nth-child(7) {
+            animation-delay: 0.65s;
+        }
+
+        .project-card:nth-child(8) {
+            animation-delay: 0.75s;
+        }
+
+        .project-card:nth-child(9) {
+            animation-delay: 0.85s;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .projects-hero {
+                padding: 2rem 1.25rem 1rem;
+            }
+
+            .projects-container {
+                padding: 1.25rem 1.25rem 3rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .projects-page-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">JKS</a>
+                <div class="nav-right">
+                    <a href="index.html#hero" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#experience" class="nav-link">Journey</a>
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="index.html#contact" class="nav-cta">Get in Touch!</a>
+                    <button id="theme-toggle" class="theme-toggle-nav" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="projects-hero">
+            <div class="projects-hero-inner">
+                <a href="index.html#experience" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <div>
+                    <h1 class="projects-page-title">ALL PROJECTS</h1>
+                    <p class="projects-subtitle">// Things I've built &amp; shipped</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-container">
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- Project 1: HireByte -->
+                <div class="project-card accent-cyan">
+                    <div class="project-card-header">
+                        <span class="project-emoji">💼</span>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <h2 class="project-name">HireByte</h2>
+                    <p class="project-tagline">Resume Builder Platform</p>
+                    <p class="project-desc">
+                        A modern &amp; ATS-friendly resume building platform that simplifies the hiring process for
+                        both recruiters and candidates. Features real-time preview, multiple templates, and
+                        Firebase-powered storage.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://hirebyte.vercel.app/" target="_blank" class="proj-btn proj-btn-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Jeeban-2006/HireByte" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: DiaGuard AI -->
+                <div class="project-card accent-green">
+                    <div class="project-card-header">
+                        <span class="project-emoji">🏥</span>
+                        <span class="project-status status-github">GitHub</span>
+                    </div>
+                    <h2 class="project-name">DiaGuard AI</h2>
+                    <p class="project-tagline">Healthcare Web App</p>
+                    <p class="project-desc">
+                        A preventive healthcare web application that uses AI and Machine Learning to monitor
+                        and manage diabetes effectively. Provides personalized insights, risk scoring, and
+                        health tracking dashboards.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Machine Learning</span>
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Data Science</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Jeeban-2006/diaguard" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Rewire -->
+                <div class="project-card accent-yellow">
+                    <div class="project-card-header">
+                        <span class="project-emoji">✅</span>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <h2 class="project-name">Rewire</h2>
+                    <p class="project-tagline">Advanced ToDo App</p>
+                    <p class="project-desc">
+                        A sleek and advanced task management application built with Next.js &amp; TypeScript.
+                        Features drag-and-drop task reordering, priority levels, due dates, and a clean
+                        dark-mode interface for a seamless user experience.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://rewire-todo.netlify.app/" target="_blank" class="proj-btn proj-btn-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: marjoballabani.me (This Portfolio) -->
+                <div class="project-card accent-pink">
+                    <div class="project-card-header">
+                        <span class="project-emoji">🌐</span>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <h2 class="project-name">Portfolio Website</h2>
+                    <p class="project-tagline">Personal Developer Portfolio</p>
+                    <p class="project-desc">
+                        This very website! A neo-brutalist styled personal portfolio showcasing my projects,
+                        skills, and journey. Features a custom loading animation, scroll-driven effects,
+                        an interactive map, and a terminal easter-egg page.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Leaflet.js</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="index.html" class="proj-btn proj-btn-live">
+                            <i class="fas fa-external-link-alt"></i> View Site
+                        </a>
+                        <a href="https://github.com/Jeeban-2006/marjoballabani.me" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: ScamShield -->
+                <div class="project-card accent-cyan">
+                    <div class="project-card-header">
+                        <span class="project-emoji">🛡️</span>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <h2 class="project-name">ScamShield</h2>
+                    <p class="project-tagline">AI-Powered Scam Detection Platform</p>
+                    <p class="project-desc">
+                        An advanced scam detection platform using AI &amp; ML to identify phishing links,
+                        suspicious messages, and online fraud. Features a web app, browser extension,
+                        WhatsApp bot, and real-time risk scoring powered by Groq Llama 3.3 70B.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Django</span>
+                        <span class="project-tag">scikit-learn</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">MongoDB</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://scam-shield-fawn.vercel.app/" target="_blank" class="proj-btn proj-btn-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Jeeban-2006/Scam_Shield" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: DSA Sync -->
+                <div class="project-card accent-yellow">
+                    <div class="project-card-header">
+                        <span class="project-emoji">🚀</span>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <h2 class="project-name">DSA Sync</h2>
+                    <p class="project-tagline">AI-Powered Collaborative DSA Tracker</p>
+                    <p class="project-desc">
+                        A collaborative Data Structures &amp; Algorithms growth platform with AI-generated
+                        insights, friend challenges, revision reminders, push notifications, and
+                        a full PWA experience. Powered by Groq AI and built as a Next.js app.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js 14</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Groq AI</span>
+                        <span class="project-tag">PWA</span>
+                        <span class="project-tag">Zustand</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://dsa-sync.vercel.app/" target="_blank" class="proj-btn proj-btn-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Jeeban-2006/DSA-Sync" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Cosmic Watch -->
+                <div class="project-card accent-pink">
+                    <div class="project-card-header">
+                        <span class="project-emoji">🪐</span>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <h2 class="project-name">Cosmic Watch v2</h2>
+                    <p class="project-tagline">Space Exploration Web App</p>
+                    <p class="project-desc">
+                        An immersive cosmic exploration app featuring live space data, real-time
+                        satellite tracking, celestial event countdowns, and stunning space visuals.
+                        Built for space enthusiasts who want to stay connected to the universe.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML/CSS</span>
+                        <span class="project-tag">Space APIs</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://cosmicwatch.vercel.app/" target="_blank" class="proj-btn proj-btn-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Jeeban-2006/Cosmic_Watch_v2" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 8: NASA Explorer -->
+                <div class="project-card accent-green">
+                    <div class="project-card-header">
+                        <span class="project-emoji">🌌</span>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <h2 class="project-name">NASA Explorer</h2>
+                    <p class="project-tagline">Space Discovery Web App</p>
+                    <p class="project-desc">
+                        An interactive space explorer powered by NASA APIs. Discover the Astronomy
+                        Picture of the Day, real Mars rover photos, exoplanets, satellite tracking,
+                        and a space quiz — all wrapped in a 3D starfield canvas experience.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">NASA API</span>
+                        <span class="project-tag">N2YO API</span>
+                        <span class="project-tag">Canvas</span>
+                        <span class="project-tag">HTML/CSS</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://nasa-explorer0.netlify.app/" target="_blank" class="proj-btn proj-btn-live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Jeeban-2006/NASA-Explorer" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9: Bondly -->
+                <div class="project-card accent-cyan">
+                    <div class="project-card-header">
+                        <span class="project-emoji">🤝</span>
+                        <span class="project-status status-wip">WIP</span>
+                    </div>
+                    <h2 class="project-name">Bondly</h2>
+                    <p class="project-tagline">AI Connector Platform</p>
+                    <p class="project-desc">
+                        An AI-powered connector platform designed to bridge people, ideas, and
+                        opportunities intelligently. Leverages machine learning to create meaningful
+                        connections and facilitate collaboration in a smart, context-aware way.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">AI/ML</span>
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">TypeScript</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Jeeban-2006/bondly-ai-connector" target="_blank"
+                            class="proj-btn proj-btn-github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-compact">
+                <div class="footer-main">
+                    <div class="footer-brand-compact">
+                        <strong>JEEBAN KRUSHNA SAHU</strong>
+                        <span>AI/ML Engineer &amp; Frontend Developer</span>
+                    </div>
+                    <div class="footer-nav-compact">
+                        <a href="index.html#hero">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#experience">Journey</a>
+                        <a href="index.html#skills">Skills</a>
+                    </div>
+                    <div class="footer-social-compact">
+                        <a href="https://github.com/Jeeban-2006" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/jeeban-krushna-sahu-004228301" target="_blank"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jenext.exe" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:jeebankrushnasahu1@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom-compact">
+                    <span>© 2026 Jeeban Krushna Sahu</span>
+                    <a href="terminal.html" class="footer-terminal-link-compact">
+                        <i class="fas fa-terminal"></i> Terminal
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- /page-wrapper -->
+
+    <script>
+        // Dark mode — sync with localStorage (same as main site)
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+
+        // Navbar hide/show on scroll
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScroll && currentScroll > 80) {
+                navbar.classList.add('navbar-hidden');
+            } else {
+                navbar.classList.remove('navbar-hidden');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Fade-in animation for cards via IntersectionObserver
+        const cards = document.querySelectorAll('.project-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
+</body>
+
+</html>

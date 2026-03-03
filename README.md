@@ -1,103 +1,286 @@
-# marjoballabani.me
+# 🎨 jeebankrushnasahu.me
 
-A neo-brutalist personal portfolio built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no dependencies - just raw code with bold design choices.
+[![Live Site](https://img.shields.io/badge/Live-jeebankrushnasahu.me-orange?style=for-the-badge)](https://jeebankrushnasahu.me)
+[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
+[![Made with](https://img.shields.io/badge/Made_with-Vanilla_JS-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-This is a personal fun project, not a production template. The code prioritizes creativity and experimentation over best practices. It's a playground for trying out ideas, animations, and interactions - not a reference architecture.
+A bold, modern **neo-brutalist personal portfolio** built from scratch with pure HTML, CSS, and JavaScript. No frameworks, no build tools — just raw, creative code that makes a statement.
 
-**[Live Site](https://marjoballabani.me)**
+<div align="center">
 
-## What is Neo-Brutalism?
+**[🌐 Live Site](https://jeebankrushnasahu.me)** • **[💻 Terminal Mode](https://jeebankrushnasahu.me/terminal.html)** • **[📁 All Projects](https://jeebankrushnasahu.me/projects.html)**
 
-Neo-brutalism (also called neo-brutalist web design) is a UI style inspired by brutalist architecture - raw, bold, and unapologetically loud. It rejects the polished, rounded, drop-shadowed sameness of modern web design and replaces it with:
+</div>
 
-- **Thick black borders** - every element has a hard, visible edge
-- **Flat, offset box shadows** - no soft gradients or blurs, just solid color blocks shifted by a few pixels (`box-shadow: 8px 8px 0 #000`)
-- **High-contrast color palettes** - bright yellows, pinks, cyans, and greens on white/dark backgrounds
-- **Visible structure** - the "bones" of the layout are intentionally exposed, not hidden behind smooth transitions
-- **Playful imperfection** - torn paper edges, tape stickers, hand-drawn vibes mixed with geometric precision
+---
 
-This site leans into a **hand-crafted, scrapbook-like** take on neo-brutalism: paper tear dividers, a falling SVG terminal icon, highlight markers that animate on scroll, and a treasure map hidden behind a book-flip animation.
+## 👨‍💻 About
 
-## Design Decisions
+This is the personal portfolio of **Jeeban Krushna Sahu** — a B.Tech Computer Science student at ITER, SOA University, Bhubaneswar (CGPA: 8.86/10.0). Passionate about AI/ML engineering, full-stack development, and building impactful open-source tools.
 
-### Color System
+> 💡 **Design Philosophy:** This portfolio rejects cookie-cutter templates in favor of bold creativity. It's a playground for animations, interactions, and experimental web design — code that tells a story.
 
-The palette uses CSS custom properties for light/dark theming:
+---
 
-| Color | Variable | Usage |
-|-------|----------|-------|
-| Yellow | `--yellow` | Primary accent, CTAs, loader |
-| Cyan | `--cyan` | Code elements, highlights |
-| Pink | `--pink` | Secondary accent, highlights |
-| Green | `--green` | Success states, highlights |
-| Black | `--border` | Borders, shadows, text |
+## 🎨 What is Neo-Brutalism?
 
-### Typography
+Neo-brutalism is a design movement that rejects the polished, rounded uniformity of modern web design:
 
-- **Space Grotesk** - headings and body text (geometric sans-serif that fits the brutalist aesthetic)
-- **Space Mono** - code snippets and terminal elements
-- **Caveat** - handwritten annotations (the "human touch" element)
+- **🔲 Thick Black Borders** — Hard, visible edges on every element
+- **📦 Flat Offset Shadows** — `box-shadow: 8px 8px 0 #000` for depth
+- **🌈 High-Contrast Palettes** — Bright yellows, pinks, cyans, and greens
+- **🏗️ Visible Structure** — The layout's bones are intentionally exposed
+- **✨ Playful Imperfection** — Torn paper edges, tape stickers, hand-drawn vibes
 
-### Key Design Elements
+This portfolio embraces all of these principles to create a unique, memorable experience.
 
-**Paper Tear Effect** - Sections are separated by SVG-drawn torn paper edges that close on scroll with a parallax effect, finished by a tape sticker that "seals" the tear back together.
+---
 
-**Book Flip Timeline** - The journey section starts as a closed treasure map that flips open like a book page to reveal the career timeline underneath.
+## ✨ Key Features
 
-**Scroll-Driven Highlights** - Text highlights animate in from left/right as you scroll, mimicking a highlighter pen being drawn across the page.
+### 🎯 Main Portfolio (index.html)
 
-**Interactive Map** - Leaflet.js with Stamen watercolor tiles, styled with a grid overlay and pirate illustration. Clicking timeline entries flies to the corresponding map marker.
+| Feature | Description |
+|---------|-------------|
+| **📄 Paper Tear Effect** | SVG torn paper edges between sections with scroll animations |
+| **📖 Book-Flip Timeline** | Interactive journey timeline that opens like a treasure map |
+| **🖍️ Scroll Highlights** | Text highlights animate like a real highlighter pen |
+| **🗺️ Interactive Map** | Leaflet.js map — click timeline entries to fly to locations |
+| **⌨️ Matrix Typing** | Hero greeting scrambles through random characters before resolving |
+| **🎯 Falling Icons** | SVG tech icons drop with physics-based gravity on scroll |
+| **📱 Fully Responsive** | Perfect on mobile, tablet, and desktop |
+| **⚡ Performance Optimized** | Lazy loading, preconnect, and minimal dependencies |
 
-**Matrix Typing Effect** - The hero greeting scrambles through random characters before resolving to the final text.
+### 💻 Terminal Mode (terminal.html)
 
-**Falling Decorative Icons** - SVG icons around the hero photo drop with gravity when you start scrolling.
+An interactive terminal-style resume with 15+ commands:
 
-## Terminal Mode
+**Main Commands:**
+- `about` — Professional summary
+- `skills` — Technical expertise
+- `experience` — Work history
+- `education` — Academic background
+- `contact` — Get in touch
+- `projects` — Project showcase
 
-Visit [/terminal.html](https://marjoballabani.me/terminal.html) for an interactive terminal-style resume.
+**Utility Commands:**
+- `skills-visual` — Interactive skills visualization
+- `game` — Play Snake game (p5.js)
+- `matrix` — Matrix digital rain effect
+- `weather <city>` — Check weather
+- `calc <expression>` — Calculator
+- `pdf` — Download resume
+- `linkedin-cover` — Generate LinkedIn cover image
 
-Features:
-- Type `help` to see available commands
-- Multiple color themes (Default, Dracula, Solarized, Nord)
-- Split terminal panes (horizontal/vertical)
-- Built-in Snake game (via p5.js)
-- Command history with arrow keys
+**Features:**
+- 🎨 Multiple themes (Default, Dracula, Solarized, Nord)
+- 📝 Command history (↑/↓ arrows)
+- ⌨️ Tab completion
+- 🔀 Split terminal views (Ctrl+Shift+H/V)
+- 🎮 Interactive mini-games
 
-## Project Structure
+---
+
+## 📁 Project Structure
 
 ```
-.
-├── index.html          # Main portfolio (neo-brutalist)
-├── neo-styles.css      # Styles for index.html
-├── terminal.html       # Terminal-style resume
-├── styles.css          # Styles for terminal.html
-├── script.js           # Terminal logic & commands
-├── favicon.svg         # Site favicon
-├── image/              # Assets (avatar, icons, pirate)
-├── CNAME               # Custom domain config
-├── robots.txt          # Search engine directives
-├── sitemap.xml         # Sitemap for SEO
-└── LICENSE             # MIT License
+jeebankrushnasahu.me/
+│
+├── 🌐 HTML Files
+│   ├── index.html          # Main neo-brutalist portfolio
+│   ├── projects.html       # All projects showcase
+│   └── terminal.html       # Interactive terminal resume
+│
+├── 🎨 Stylesheets
+│   ├── neo-styles.css      # Styles for main portfolio
+│   └── styles.css          # Styles for terminal mode
+│
+├── ⚙️ Scripts
+│   └── script.js           # Terminal logic, commands & interactions
+│
+├── 🎯 Assets
+│   ├── image/              # Photos, icons, social covers
+│   ├── favicon.svg         # Site favicon (JKS logo)
+│   └── resume.pdf          # Downloadable resume
+│
+├── 🔧 Configuration
+│   ├── CNAME               # Custom domain configuration
+│   ├── robots.txt          # Search engine directives
+│   ├── sitemap.xml         # SEO sitemap
+│   └── .nojekyll           # Bypass Jekyll on GitHub Pages
+│
+└── 📄 Documentation
+    ├── README.md           # This file
+    └── LICENSE             # License information
 ```
 
-## Tech Stack
+---
 
-- **HTML/CSS/JS** - no frameworks, no build step
-- **Leaflet.js** - interactive journey map
-- **p5.js** - Snake game in terminal mode
-- **Font Awesome** - icons
-- **Google Fonts** - Space Grotesk, Space Mono, Caveat, Fira Code
+## 🛠️ Tech Stack
 
-## Run Locally
+### Core Technologies
+- **HTML5** — Semantic markup with SEO optimization
+- **CSS3** — Modern layouts (Grid, Flexbox), animations, and custom properties
+- **Vanilla JavaScript (ES6+)** — No frameworks, pure DOM manipulation
 
-```bash
-# Any static server works
-npx serve .
+### Libraries & Tools
+- **[Leaflet.js](https://leafletjs.com/)** — Interactive journey map
+- **[p5.js](https://p5js.org/)** — Snake game canvas rendering
+- **[Font Awesome 6](https://fontawesome.com/)** — Icon library
+- **[Google Fonts](https://fonts.google.com/)** — Space Grotesk, Space Mono, Caveat, Fira Code
 
-# or
-python3 -m http.server 8000
-```
+### SEO & Performance
+- Structured Data (JSON-LD)
+- Open Graph & Twitter Cards
+- Sitemap & Robots.txt
+- Lazy loading & resource preloading
+- Optimized images & fonts
 
-## License
+---
 
-This project is **proprietary**. All rights reserved. You may browse the source code for inspiration, but copying, modifying, or redistributing any part of it without written permission is not allowed. See the [LICENSE](LICENSE) file for details.
+## 🚀 Getting Started
+
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- A local web server (optional but recommended)
+
+### Installation & Running
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Jeeban-2006/jeebankrushnasahu.me.git
+   cd jeebankrushnasahu.me
+   ```
+
+2. **Start a local server**
+
+   **Option 1: Using Node.js**
+   ```bash
+   npx serve .
+   # Opens at http://localhost:3000
+   ```
+
+   **Option 2: Using Python**
+   ```bash
+   python -m http.server 8000
+   # Opens at http://localhost:8000
+   ```
+
+   **Option 3: Using PHP**
+   ```bash
+   php -S localhost:8000
+   ```
+
+   **Option 4: Using VS Code**
+   - Install "Live Server" extension
+   - Right-click `index.html` → "Open with Live Server"
+
+3. **Open in browser**
+   - Navigate to the local server URL
+   - Start exploring!
+
+> ⚠️ **Note:** Opening `index.html` directly in a browser may cause CORS issues with some features. Always use a local server for development.
+
+---
+
+## 📊 SEO & Performance
+
+✅ **SEO Optimized:**
+- Semantic HTML5 structure
+- Proper meta tags (Open Graph, Twitter Cards)
+- JSON-LD structured data
+- Sitemap.xml for search engines
+- Robots.txt configuration
+- Canonical URLs
+
+✅ **Performance:**
+- Minimal dependencies
+- Lazy loading for images & fonts
+- Preconnect to external domains
+- Efficient CSS with custom properties
+- No build process = instant updates
+
+✅ **Accessibility:**
+- High contrast ratios (WCAG AA compliant)
+- Keyboard navigation support
+- Alt text for all images
+- Semantic HTML for screen readers
+
+---
+
+## 🌐 Deployment
+
+This site is deployed on **GitHub Pages** with a custom domain.
+
+### Deploy to GitHub Pages
+
+1. Push to GitHub:
+   ```bash
+   git add .
+   git commit -m "Update portfolio"
+   git push origin main
+   ```
+
+2. Enable GitHub Pages:
+   - Go to repository Settings → Pages
+   - Set source to `main` branch
+   - Add custom domain in CNAME file
+
+3. Configure DNS (for custom domain):
+   - Add A records pointing to GitHub Pages IPs
+   - Add CNAME record: `www` → `<username>.github.io`
+
+---
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but feedback and suggestions are welcome!
+
+- 🐛 **Found a bug?** [Open an issue](https://github.com/Jeeban-2006/jeebankrushnasahu.me/issues)
+- 💡 **Have an idea?** Feel free to suggest improvements
+- ⭐ **Like the project?** Give it a star!
+
+---
+
+## 📝 License
+
+This project is **proprietary** and all rights are reserved.
+
+- ✅ You may view the source code for **inspiration and learning**
+- ❌ You may **NOT** copy, modify, or redistribute this code without explicit written permission
+- ❌ You may **NOT** use this design or code for your own portfolio without permission
+
+For licensing inquiries, contact: [jeebankrushnasahu1@gmail.com](mailto:jeebankrushnasahu1@gmail.com)
+
+See [LICENSE](LICENSE) for full details.
+
+---
+
+## 📬 Contact
+
+**Jeeban Krushna Sahu**
+
+- 🌐 Website: [jeebankrushnasahu.me](https://jeebankrushnasahu.me)
+- 💼 LinkedIn: [linkedin.com/in/jeeban-krushna-sahu-004228301](https://linkedin.com/in/jeeban-krushna-sahu-004228301)
+- 🐙 GitHub: [github.com/Jeeban-2006](https://github.com/Jeeban-2006)
+- 📧 Email: [jeebankrushnasahu1@gmail.com](mailto:jeebankrushnasahu1@gmail.com)
+- 📸 Instagram: [@jenext.exe](https://instagram.com/jenext.exe)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Design Inspiration:** Neo-brutalism movement, Gumroad, Linear
+- **Libraries:** Leaflet.js contributors, p5.js community
+- **Fonts:** Google Fonts, Font Awesome team
+- **Hosting:** GitHub Pages
+
+---
+
+<div align="center">
+
+**Made with ❤️ and lots of ☕ by Jeeban Krushna Sahu**
+
+⭐ Star this repo if you found it interesting!
+
+</div>

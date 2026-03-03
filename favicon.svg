@@ -2,19 +2,29 @@
   <!-- Background -->
   <rect width="64" height="64" fill="#ffd93d"/>
 
-  <!-- M Letter Box -->
-  <rect x="8" y="16" width="20" height="24" fill="#66d9ef" stroke="#000" stroke-width="2"/>
+  <!-- J Letter Box -->
+  <rect x="4" y="12" width="20" height="24" fill="#66d9ef" stroke="#000" stroke-width="2"/>
 
-  <!-- B Letter Box -->
-  <rect x="36" y="16" width="20" height="24" fill="#ff6b9d" stroke="#000" stroke-width="2"/>
+  <!-- K Letter Box -->
+  <rect x="26" y="12" width="16" height="24" fill="#ff6b9d" stroke="#000" stroke-width="2"/>
 
-  <!-- M Letter -->
-  <text x="18" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000">M</text>
+  <!-- S Letter Box -->
+  <rect x="44" y="12" width="16" height="24" fill="#a8ff78" stroke="#000" stroke-width="2"/>
 
-  <!-- B Letter -->
-  <text x="46" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000">B</text>
+  <!-- J Letter -->
+  <text x="9" y="31" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#000">J</text>
+
+  <!-- K Letter -->
+  <text x="29" y="31" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#000">K</text>
+
+  <!-- S Letter -->
+  <text x="47" y="31" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#000">S</text>
 
   <!-- Neo-brutalist shadows -->
-  <rect x="11" y="19" width="20" height="24" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
-  <rect x="39" y="19" width="20" height="24" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
+  <rect x="7" y="15" width="20" height="24" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
+  <rect x="29" y="15" width="16" height="24" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
+  <rect x="47" y="15" width="16" height="24" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
+
+  <!-- Bottom accent bar -->
+  <rect x="4" y="42" width="56" height="8" fill="#000" opacity="0.15"/>
 </svg>
