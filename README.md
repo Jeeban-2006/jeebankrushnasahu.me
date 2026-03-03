@@ -270,6 +270,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## 🙏 Acknowledgments
 
+- **Original Design & Codebase:** [Marjo Ballabani](https://github.com/marjoballabani) - This portfolio is built upon Marjo's excellent neo-brutalist template and has been extensively customized and personalized with my own content, projects, and features.
 - **Design Inspiration:** Neo-brutalism movement, Gumroad, Linear
 - **Libraries:** Leaflet.js contributors, p5.js community
 - **Fonts:** Google Fonts, Font Awesome team
